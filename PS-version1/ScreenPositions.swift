@@ -64,7 +64,12 @@ class Positioning: ObservableObject {
             return (x, y)
         }
     lazy var myLocation = latlngToScreenXY(lati: 1.3215036989460596, lng: 103.84589699073983)
-    lazy var landmark1 = latlngToScreenXY(lati: 1.3210407110784648, lng: 103.84563443743097)
-    lazy var landmark1up = latlngToScreenXY(lati: 1.3210407110784648, lng: 103.84563443743097)
+//    if CGPoint.zero.angle(to: escalator) < 45 {
+//      https://stackoverflow.com/questions/6064630/get-angle-from-2-positions
+    // trying to detect the angle between points to say to go straight or otherwise
+//    }
+//    lazy var landmark1 = latlngToScreenXY(lati: 1.3210407110784648, lng: 103.84563443743097)
+    lazy var escalator = latlngToScreenXY(lati: 1.3209173998445964, lng: 103.84551526365351)
+    lazy var escalatorup = latlngToScreenXY(lati: 1.3209173998445964, lng: 103.84551526365351)
 }
 

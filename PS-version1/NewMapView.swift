@@ -26,9 +26,11 @@ struct NewMapView: View {
 //        sfsfs.markers = CGPoint(x: xtrans, y: ytrans)
 //    }
     @State private var opacity = false
+    @State private var nextMap = false
     @State private var currentAmount = 0.0
     @State private var finalAmount = 1.0
     @State var showNavHome = false
+    @State var sas = FlashcardView().steps.id
     
     var body: some View {
         VStack(alignment: .center) {
@@ -63,14 +65,21 @@ struct NewMapView: View {
                         Image("map")
                             .scaledToFit()
                             .opacity(0.4)
-                           
-//                            .padding()
                         if opacity {
                             Image("map")
                                 .scaledToFit()
                                 .opacity(1)
-//                                .rotationEffect(Angle(degrees: self.compassHeading.degrees))
-//                                .padding()
+                        }
+                        Image("map2")
+                            .scaledToFit()
+                            .opacity(0)
+                        if nextMap {
+                            Image("map2")
+                                .scaledToFit()
+                                .opacity(1)
+                            Image("map")
+                                .scaledToFit()
+                                .opacity(0)
                         }
                             Line()
                                 .stroke(style: StrokeStyle(lineWidth: 2, dash: [5]))
@@ -83,35 +92,46 @@ struct NewMapView: View {
 //                                .rotationEffect(Angle(degrees: self.compassHeading.degrees), anchor: .init(x: CGFloat(screenpositions.myLocation.0)/12, y: CGFloat(screenpositions.myLocation.1)*12500))
                         
                                 .scaleEffect(finalAmount + currentAmount)
-                                .onTapGesture(count: 2) {
-    //                                MagnificationGesture()
-    //                                    .onChanged { amount in
-    //                                        currentAmount = amount - 1
-    //                                    }
-    //                                    .onEnded { amount in
-    //                                        finalAmount += currentAmount
-    //                                        currentAmount = 0
-    //                                    }
-                                    print(CGFloat(screenpositions.landmark1.0))
-                                    print(CGFloat(screenpositions.landmark1.1))
-
-                                }
+//                                .onTapGesture(count: 2) {
+//    //                                MagnificationGesture()
+//    //                                    .onChanged { amount in
+//    //                                        currentAmount = amount - 1
+//    //                                    }
+//    //                                    .onEnded { amount in
+//    //                                        finalAmount += currentAmount
+//    //                                        currentAmount = 0
+//    //                                    }
+//                                    print(CGFloat(screenpositions.landmark1.0))
+//                                    print(CGFloat(screenpositions.landmark1.1))
+//
+//                                }
                             
-    //                            .onTapGesture(count: 2) {
-    //                                print(UIScreen.main.bounds.maxX)
-    //                                print(CGFloat(screenpositions.landmark1.0))
-    //                                print(CGFloat(screenpositions.landmark1.1))
-    //
-    //                            }
+                                .onTapGesture(count: 2) {
+                                    print(UIScreen.main.bounds.maxX)
+                                    print(CGFloat(screenpositions.escalator.0))
+                                    print(CGFloat(screenpositions.escalator.1))
+    
+                                }
 
                            
                             
+//                            Circle()
+//                                .frame(width: 10, height: 10, alignment: .center)
+//                                .position(x: (CGFloat(screenpositions.landmark1.0)/12)+210, y: CGFloat(screenpositions.landmark1.1)*12500)
+//                                .foregroundColor(.blue)
                             Circle()
                                 .frame(width: 10, height: 10, alignment: .center)
-                                .position(x: (CGFloat(screenpositions.landmark1.0)/12)+210, y: CGFloat(screenpositions.landmark1.1)*12500)
+                                .position(x: (CGFloat(screenpositions.escalator.0)/12)+315, y: CGFloat(screenpositions.escalator.1)*12500)
                                 .foregroundColor(.blue)
-                        
-                            
+                        Circle()
+                            .frame(width: 10, height: 10, alignment: .center)
+                            .position(x: (CGFloat(screenpositions.escalatorup.0)/12)+315, y: CGFloat(screenpositions.escalatorup.1)*12500)
+                            .foregroundColor(.yellow)
+                            .opacity(0.5)
+                        if sas == 3 {
+                            nextMap = true
+                        }
+                                
                         
 //                        ZStack
                        

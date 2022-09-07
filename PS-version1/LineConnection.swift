@@ -14,7 +14,7 @@ struct Line: Shape {
     func path(in rect: CGRect) -> Path {
         var path = Path()
         path.move(to: CGPoint(x: CGFloat(screenpositions.myLocation.0)/11, y: CGFloat(screenpositions.myLocation.1)*12500))
-        path.addLine(to: CGPoint(x: (CGFloat(screenpositions.landmark1.0)/12)+210, y: CGFloat(screenpositions.landmark1.1)*12500))
+        path.addLine(to: CGPoint(x: (CGFloat(screenpositions.escalator.0)/12)+315, y: CGFloat(screenpositions.escalator.1)*12500))
         return path
     }
 }
