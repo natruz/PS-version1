@@ -14,43 +14,44 @@ struct JourneyView: View {
     var stepsCompleted = 0
     
     @State var returnTo = false
-    
+    @State var nee = NewMapView()
     var body: some View {
-        VStack {
-            HStack {
-//                NavigationLink(destination: NavigationHomeView(), isActive: $returnTo) {
+//        VStack {
+//            HStack {
+////                NavigationLink(destination: NavigationHomeView(), isActive: $returnTo) {
+////                    Image(systemName: "xmark")
+////                        .font(.largeTitle)
+////                        .padding()
+////                }
+//                Button {
+//                    returnTo = true
+//                } label: {
 //                    Image(systemName: "xmark")
-//                        .font(.largeTitle)
-//                        .padding()
+//                    .font(.largeTitle)
+//                    .padding()
 //                }
-                Button {
-                    returnTo = true
-                } label: {
-                    Image(systemName: "xmark")
-                    .font(.largeTitle)
-                    .padding()
-                }
-                Spacer()
-            }
-            VStack {
-                Rectangle()
-            }
-            HStack {
-                Image(systemName: "chevron.left")
-                    .font(.largeTitle)
-                Spacer()
-                ForEach(1...steps, id: \.self) {_ in
-                    Image(systemName: "circle.fill")
-                }
-                Spacer()
-                Image(systemName: "chevron.right")
-                    .font(.largeTitle)
-            }
-            .padding()
-        }
-        .padding()
-        .navigationBarHidden(true)
-        .navigate(to: NavigationHomeView(), when: $returnTo)
+//                Spacer()
+//            }
+//            VStack {
+//                Rectangle()
+//            }
+//            HStack {
+//                Image(systemName: "chevron.left")
+//                    .font(.largeTitle)
+//                Spacer()
+//                ForEach(1...steps, id: \.self) {_ in
+//                    Image(systemName: "circle.fill")
+//                }
+//                Spacer()
+//                Image(systemName: "chevron.right")
+//                    .font(.largeTitle)
+//            }
+//            .padding()
+//        }
+//        .padding()
+//        .navigationBarHidden(true)
+//        .navigate(to: NavigationHomeView(), when: $returnTo)
+        NewMapView()
     }
 }
 
