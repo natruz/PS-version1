@@ -10,19 +10,18 @@ import SwiftUI
 struct DoctorView: View {
     var body: some View {
         VStack {
-            Rectangle()
-            NavigationLink(destination: AppointmentView()) {
-                VStack {
-                    Text("Appointments")
-                        .font(.title)
-                    Text("(Book, Reschedule, Cancel)")
-                        .font(.body)
-                }
-                .frame(width: 350, height: 100)
-                .foregroundColor(.white)
-                .background(.gray)
-                .cornerRadius(15)
-            }
+//            NavigationLink(destination: AppointmentView()) {
+//                VStack {
+//                    Text("Appointments")
+//                        .font(.title)
+//                    Text("(Book, Reschedule, Cancel)")
+//                        .font(.body)
+//                }
+//                .frame(width: 350, height: 100)
+//                .foregroundColor(.white)
+//                .background(.gray)
+//                .cornerRadius(15)
+//            }
             NavigationLink(destination: ServicesView()) {
                 VStack {
                     Text("Services Available")
@@ -31,8 +30,8 @@ struct DoctorView: View {
                         .font(.body)
                 }
                 .frame(width: 350, height: 100)
-                .foregroundColor(.white)
-                .background(.gray)
+                .foregroundColor(textColour)
+                .background(backgroundColour)
                 .cornerRadius(15)
             }
             NavigationLink(destination: DoctorsView()) {
@@ -43,9 +42,19 @@ struct DoctorView: View {
                         .font(.body)
                 }
                 .frame(width: 350, height: 100)
-                .foregroundColor(.white)
-                .background(.gray)
+                .foregroundColor(textColour)
+                .background(secondaryBackgroundColour)
                 .cornerRadius(15)
+            }
+            Button {
+                
+            } label: {
+                Text("Locate")
+                    .font(.title)
+                    .foregroundColor(textColour)
+                    .padding()
+                    .background(tertiaryBackgroundColour)
+                    .cornerRadius(15)
             }
         }
     }

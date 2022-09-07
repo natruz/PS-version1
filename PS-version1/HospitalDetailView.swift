@@ -16,10 +16,17 @@ struct HospitalDetailView: View {
             Image(hospital.image)
                 .resizable()
                 .scaledToFit()
+            Text(hospital.name)
+                .foregroundColor(textColour)
+                .font(.largeTitle)
+                .padding()
+                .frame(maxWidth: .infinity)
+                .background(backgroundColour)
+                .border(.white)
             Rectangle()
                 .foregroundColor(.gray)
         }
-        .navigationBarTitle(hospital.name)
+        .navigationBarTitle("")
     }
 }
 
