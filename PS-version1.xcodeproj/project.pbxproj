@@ -7,18 +7,46 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E18C30928AF682600C55DCD /* AppointmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E18C30828AF682500C55DCD /* AppointmentView.swift */; };
+		2E18C30B28AF685100C55DCD /* ServicesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E18C30A28AF685100C55DCD /* ServicesView.swift */; };
+		2E18C30D28AF686F00C55DCD /* OthersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E18C30C28AF686F00C55DCD /* OthersView.swift */; };
+		2E4FDF6D288638B70000CA9E /* HospitalNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4FDF6C288638B60000CA9E /* HospitalNavigationView.swift */; };
+		2E4FDF71288639F40000CA9E /* Navigate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4FDF70288639F40000CA9E /* Navigate.swift */; };
+		2E4FDF7328863EC20000CA9E /* CongratsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4FDF7228863EC20000CA9E /* CongratsScreen.swift */; };
+		2E4FDF76288653DE0000CA9E /* NavigationFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4FDF75288653DE0000CA9E /* NavigationFormView.swift */; };
 		2E609F2628858D0D00D09E14 /* PS_version1App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E609F2528858D0D00D09E14 /* PS_version1App.swift */; };
 		2E609F2828858D0D00D09E14 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E609F2728858D0D00D09E14 /* ContentView.swift */; };
 		2E609F2A28858D1200D09E14 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E609F2928858D1200D09E14 /* Assets.xcassets */; };
 		2E609F2D28858D1200D09E14 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E609F2C28858D1200D09E14 /* Preview Assets.xcassets */; };
+		2E609F3428858D7D00D09E14 /* Hospital.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E609F3328858D7D00D09E14 /* Hospital.swift */; };
+		2E609F3628859DF500D09E14 /* HospitalDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E609F3528859DF400D09E14 /* HospitalDetailView.swift */; };
+		2E609F382885A14100D09E14 /* DoctorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E609F372885A14100D09E14 /* DoctorView.swift */; };
+		2E609F3A2885A16E00D09E14 /* NavigationHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E609F392885A16E00D09E14 /* NavigationHomeView.swift */; };
+		2E609F3E2885A27000D09E14 /* HospitalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E609F3D2885A27000D09E14 /* HospitalView.swift */; };
+		2E694EED28B372CD00FCAAA3 /* Appointment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E694EEC28B372CD00FCAAA3 /* Appointment.swift */; };
+		2E98669F28AC902D000607CE /* JourneyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E98669E28AC902D000607CE /* JourneyView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2E18C30828AF682500C55DCD /* AppointmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentView.swift; sourceTree = "<group>"; };
+		2E18C30A28AF685100C55DCD /* ServicesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesView.swift; sourceTree = "<group>"; };
+		2E18C30C28AF686F00C55DCD /* OthersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OthersView.swift; sourceTree = "<group>"; };
+		2E4FDF6C288638B60000CA9E /* HospitalNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HospitalNavigationView.swift; sourceTree = "<group>"; };
+		2E4FDF70288639F40000CA9E /* Navigate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigate.swift; sourceTree = "<group>"; };
+		2E4FDF7228863EC20000CA9E /* CongratsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CongratsScreen.swift; sourceTree = "<group>"; };
+		2E4FDF75288653DE0000CA9E /* NavigationFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationFormView.swift; sourceTree = "<group>"; };
 		2E609F2228858D0D00D09E14 /* PS-version1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PS-version1.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E609F2528858D0D00D09E14 /* PS_version1App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PS_version1App.swift; sourceTree = "<group>"; };
 		2E609F2728858D0D00D09E14 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		2E609F2928858D1200D09E14 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2E609F2C28858D1200D09E14 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		2E609F3328858D7D00D09E14 /* Hospital.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hospital.swift; sourceTree = "<group>"; };
+		2E609F3528859DF400D09E14 /* HospitalDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HospitalDetailView.swift; sourceTree = "<group>"; };
+		2E609F372885A14100D09E14 /* DoctorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorView.swift; sourceTree = "<group>"; };
+		2E609F392885A16E00D09E14 /* NavigationHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationHomeView.swift; sourceTree = "<group>"; };
+		2E609F3D2885A27000D09E14 /* HospitalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HospitalView.swift; sourceTree = "<group>"; };
+		2E694EEC28B372CD00FCAAA3 /* Appointment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Appointment.swift; sourceTree = "<group>"; };
+		2E98669E28AC902D000607CE /* JourneyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JourneyView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +60,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2E18C30E28AF687C00C55DCD /* Doctors */ = {
+			isa = PBXGroup;
+			children = (
+				2E18C30828AF682500C55DCD /* AppointmentView.swift */,
+				2E18C30A28AF685100C55DCD /* ServicesView.swift */,
+				2E18C30C28AF686F00C55DCD /* OthersView.swift */,
+			);
+			path = Doctors;
+			sourceTree = "<group>";
+		};
+		2E4FDF7428863EFD0000CA9E /* Swift Files */ = {
+			isa = PBXGroup;
+			children = (
+				2E694EEC28B372CD00FCAAA3 /* Appointment.swift */,
+				2E4FDF70288639F40000CA9E /* Navigate.swift */,
+				2E609F3328858D7D00D09E14 /* Hospital.swift */,
+			);
+			path = "Swift Files";
+			sourceTree = "<group>";
+		};
 		2E609F1928858D0D00D09E14 = {
 			isa = PBXGroup;
 			children = (
@@ -53,6 +101,16 @@
 			children = (
 				2E609F2528858D0D00D09E14 /* PS_version1App.swift */,
 				2E609F2728858D0D00D09E14 /* ContentView.swift */,
+				2E609F3D2885A27000D09E14 /* HospitalView.swift */,
+				2E609F3528859DF400D09E14 /* HospitalDetailView.swift */,
+				2E609F372885A14100D09E14 /* DoctorView.swift */,
+				2E609F392885A16E00D09E14 /* NavigationHomeView.swift */,
+				2E4FDF75288653DE0000CA9E /* NavigationFormView.swift */,
+				2E18C30E28AF687C00C55DCD /* Doctors */,
+				2E98669E28AC902D000607CE /* JourneyView.swift */,
+				2E4FDF6C288638B60000CA9E /* HospitalNavigationView.swift */,
+				2E4FDF7228863EC20000CA9E /* CongratsScreen.swift */,
+				2E4FDF7428863EFD0000CA9E /* Swift Files */,
 				2E609F2928858D1200D09E14 /* Assets.xcassets */,
 				2E609F2B28858D1200D09E14 /* Preview Content */,
 			);
@@ -137,8 +195,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E18C30928AF682600C55DCD /* AppointmentView.swift in Sources */,
 				2E609F2828858D0D00D09E14 /* ContentView.swift in Sources */,
+				2E609F3628859DF500D09E14 /* HospitalDetailView.swift in Sources */,
+				2E609F382885A14100D09E14 /* DoctorView.swift in Sources */,
+				2E98669F28AC902D000607CE /* JourneyView.swift in Sources */,
 				2E609F2628858D0D00D09E14 /* PS_version1App.swift in Sources */,
+				2E18C30B28AF685100C55DCD /* ServicesView.swift in Sources */,
+				2E609F3428858D7D00D09E14 /* Hospital.swift in Sources */,
+				2E4FDF76288653DE0000CA9E /* NavigationFormView.swift in Sources */,
+				2E609F3E2885A27000D09E14 /* HospitalView.swift in Sources */,
+				2E4FDF71288639F40000CA9E /* Navigate.swift in Sources */,
+				2E694EED28B372CD00FCAAA3 /* Appointment.swift in Sources */,
+				2E18C30D28AF686F00C55DCD /* OthersView.swift in Sources */,
+				2E4FDF6D288638B70000CA9E /* HospitalNavigationView.swift in Sources */,
+				2E4FDF7328863EC20000CA9E /* CongratsScreen.swift in Sources */,
+				2E609F3A2885A16E00D09E14 /* NavigationHomeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
