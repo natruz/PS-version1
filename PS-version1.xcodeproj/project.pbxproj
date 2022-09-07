@@ -28,6 +28,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		209EF3CF28C8B7A70011A5F3 /* LocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LocationView.swift; path = ../../../../testing/testing/LocationView.swift; sourceTree = "<group>"; };
+		209EF3D028C8B7A70011A5F3 /* ColourConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ColourConstants.swift; path = ../../../../testing/testing/ColourConstants.swift; sourceTree = "<group>"; };
+		209EF3D128C8B7A70011A5F3 /* CompassHeading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CompassHeading.swift; path = ../../../../testing/testing/CompassHeading.swift; sourceTree = "<group>"; };
+		209EF3D228C8B7A70011A5F3 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LocationManager.swift; path = ../../../../testing/testing/LocationManager.swift; sourceTree = "<group>"; };
+		209EF3D328C8B7A70011A5F3 /* NewMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NewMapView.swift; path = ../../../../testing/testing/NewMapView.swift; sourceTree = "<group>"; };
+		209EF3D428C8B7A70011A5F3 /* CompassData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CompassData.swift; path = ../../../../testing/testing/CompassData.swift; sourceTree = "<group>"; };
+		209EF3D528C8B7A70011A5F3 /* CompassView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CompassView.swift; path = ../../../../testing/testing/CompassView.swift; sourceTree = "<group>"; };
+		209EF3D628C8B7A70011A5F3 /* MarkerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MarkerView.swift; path = ../../../../testing/testing/MarkerView.swift; sourceTree = "<group>"; };
+		209EF3D728C8B7A70011A5F3 /* CompassMarkerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CompassMarkerView.swift; path = ../../../../testing/testing/CompassMarkerView.swift; sourceTree = "<group>"; };
+		209EF3D828C8B7A70011A5F3 /* FlashcardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FlashcardView.swift; path = ../../../../testing/testing/FlashcardView.swift; sourceTree = "<group>"; };
+		209EF3D928C8B7A70011A5F3 /* ScreenPositions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ScreenPositions.swift; path = ../../../../testing/testing/ScreenPositions.swift; sourceTree = "<group>"; };
+		209EF3DA28C8B7A80011A5F3 /* StepManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StepManager.swift; path = ../../../../testing/testing/StepManager.swift; sourceTree = "<group>"; };
+		209EF3DB28C8B7A80011A5F3 /* LineConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LineConnection.swift; path = ../../../../testing/testing/LineConnection.swift; sourceTree = "<group>"; };
+		209EF3DC28C8B7A90011A5F3 /* ZoomImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ZoomImage.swift; path = ../../../../testing/testing/ZoomImage.swift; sourceTree = "<group>"; };
 		2E18C30828AF682500C55DCD /* AppointmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentView.swift; sourceTree = "<group>"; };
 		2E18C30A28AF685100C55DCD /* ServicesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesView.swift; sourceTree = "<group>"; };
 		2E18C30C28AF686F00C55DCD /* OthersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OthersView.swift; sourceTree = "<group>"; };
@@ -60,6 +74,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		209EF3AC28C8B6C70011A5F3 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				209EF3DC28C8B7A90011A5F3 /* ZoomImage.swift */,
+				209EF3D928C8B7A70011A5F3 /* ScreenPositions.swift */,
+				209EF3DA28C8B7A80011A5F3 /* StepManager.swift */,
+				209EF3D028C8B7A70011A5F3 /* ColourConstants.swift */,
+				209EF3D828C8B7A70011A5F3 /* FlashcardView.swift */,
+				209EF3DB28C8B7A80011A5F3 /* LineConnection.swift */,
+				209EF3D228C8B7A70011A5F3 /* LocationManager.swift */,
+				209EF3CF28C8B7A70011A5F3 /* LocationView.swift */,
+				209EF3D628C8B7A70011A5F3 /* MarkerView.swift */,
+				209EF3D328C8B7A70011A5F3 /* NewMapView.swift */,
+				209EF3D428C8B7A70011A5F3 /* CompassData.swift */,
+				209EF3D128C8B7A70011A5F3 /* CompassHeading.swift */,
+				209EF3D728C8B7A70011A5F3 /* CompassMarkerView.swift */,
+				209EF3D528C8B7A70011A5F3 /* CompassView.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
 		2E18C30E28AF687C00C55DCD /* Doctors */ = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +134,7 @@
 		2E609F2428858D0D00D09E14 /* PS-version1 */ = {
 			isa = PBXGroup;
 			children = (
+				209EF3AC28C8B6C70011A5F3 /* Navigation */,
 				2E609F2528858D0D00D09E14 /* PS_version1App.swift */,
 				2E609F2728858D0D00D09E14 /* ContentView.swift */,
 				2E609F3D2885A27000D09E14 /* HospitalView.swift */,
@@ -339,6 +375,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"PS-version1/Preview Content\"";
+				DEVELOPMENT_TEAM = V54B28UN5Q;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -367,6 +404,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"PS-version1/Preview Content\"";
+				DEVELOPMENT_TEAM = V54B28UN5Q;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
