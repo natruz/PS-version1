@@ -25,6 +25,8 @@ struct HospitalView: View {
             .tabItem {
                 Label("Navigation", systemImage: "mappin")
             }
+            .navigationTitle("")
+            .navigationBarHidden(true)
         }
     }
 }

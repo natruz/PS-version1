@@ -10,7 +10,7 @@ import SwiftUI
 struct FlashcardView: View {
    
     @State private var stepnumber = 0
-    private let steps: [Steps] = [Steps(id: 1, description: "go straight"),
+    let steps: [Steps] = [Steps(id: 1, description: "go straight"),
                           Steps(id: 2, description: "turn left"),
                           Steps(id: 3, description: "go up a floor"), Steps(id: 4, description: "turn right")]
     

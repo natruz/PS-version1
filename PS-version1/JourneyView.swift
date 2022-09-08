@@ -14,7 +14,6 @@ struct JourneyView: View {
     var stepsCompleted = 0
     
     @State var returnTo = false
-    @State var nee = NewMapView()
     var body: some View {
 //        VStack {
 //            HStack {
