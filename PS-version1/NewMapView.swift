@@ -30,7 +30,7 @@ struct NewMapView: View {
     @State private var currentAmount = 0.0
     @State private var finalAmount = 1.0
     @State var showNavHome = false
-    @State var sas = FlashcardView().steps.id
+//    @State var sas = FlashcardView().steps.id
     
     var body: some View {
         VStack(alignment: .center) {
@@ -70,17 +70,17 @@ struct NewMapView: View {
                                 .scaledToFit()
                                 .opacity(1)
                         }
-                        Image("map2")
-                            .scaledToFit()
-                            .opacity(0)
-                        if nextMap {
-                            Image("map2")
-                                .scaledToFit()
-                                .opacity(1)
-                            Image("map")
-                                .scaledToFit()
-                                .opacity(0)
-                        }
+//                        Image("map2")
+//                            .scaledToFit()
+//                            .opacity(0)
+//                        if nextMap {
+//                            Image("map2")
+//                                .scaledToFit()
+//                                .opacity(1)
+//                            Image("map")
+//                                .scaledToFit()
+//                                .opacity(0)
+//                        }
                             Line()
                                 .stroke(style: StrokeStyle(lineWidth: 2, dash: [5]))
                                 .foregroundColor(.blue)
@@ -128,9 +128,9 @@ struct NewMapView: View {
                             .position(x: (CGFloat(screenpositions.escalatorup.0)/12)+315, y: CGFloat(screenpositions.escalatorup.1)*12500)
                             .foregroundColor(.yellow)
                             .opacity(0.5)
-                        if sas == 3 {
-                            nextMap = true
-                        }
+//                        if sas == 3 {
+//                            nextMap = true
+//                        }
                                 
                         
 //                        ZStack

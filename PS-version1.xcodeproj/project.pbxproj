@@ -96,16 +96,28 @@
 			isa = PBXGroup;
 			children = (
 				209EF3FE28C8F19D0011A5F3 /* Extensions.swift */,
+				209EF3E228C8B9680011A5F3 /* ColourConstants.swift */,
+				209EF3E028C8B9680011A5F3 /* ZoomImage.swift */,
+				209EF3E728C8B9680011A5F3 /* ScreenPositions.swift */,
+				209EF3E128C8B9680011A5F3 /* LocationManager.swift */,
+				209EF3E528C8B9680011A5F3 /* StepManager.swift */,
+				209EF3DF28C8B9680011A5F3 /* LineConnection.swift */,
+				209EF3E328C8B9680011A5F3 /* CompassData.swift */,
+				209EF3E928C8B9680011A5F3 /* CompassHeading.swift */,
+				209EF3EB28C8B9680011A5F3 /* CompassMarkerView.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
 		};
-		209EF3FD28C8F1790011A5F3 /* New Group */ = {
+		209EF40028CA59BF0011A5F3 /* archive */ = {
 			isa = PBXGroup;
 			children = (
+				2E4FDF7228863EC20000CA9E /* CongratsScreen.swift */,
+				2E4FDF6C288638B60000CA9E /* HospitalNavigationView.swift */,
+				209EF3E628C8B9680011A5F3 /* LocationView.swift */,
+				209EF3EA28C8B9680011A5F3 /* MarkerView.swift */,
 			);
-			name = "New Group";
-			path = "New Group/New Group";
+			path = archive;
 			sourceTree = "<group>";
 		};
 		2E18C30E28AF687C00C55DCD /* Doctors */ = {
@@ -153,28 +165,15 @@
 				2E609F3D2885A27000D09E14 /* HospitalView.swift */,
 				2E609F3528859DF400D09E14 /* HospitalDetailView.swift */,
 				2E609F372885A14100D09E14 /* DoctorView.swift */,
+				2E18C30E28AF687C00C55DCD /* Doctors */,
 				2E609F392885A16E00D09E14 /* NavigationHomeView.swift */,
 				2E4FDF75288653DE0000CA9E /* NavigationFormView.swift */,
-				2E18C30E28AF687C00C55DCD /* Doctors */,
 				2E98669E28AC902D000607CE /* JourneyView.swift */,
-				2E4FDF6C288638B60000CA9E /* HospitalNavigationView.swift */,
-				209EF3E628C8B9680011A5F3 /* LocationView.swift */,
-				209EF3EA28C8B9680011A5F3 /* MarkerView.swift */,
 				209EF3DD28C8B9580011A5F3 /* NewMapView.swift */,
-				209EF3E028C8B9680011A5F3 /* ZoomImage.swift */,
-				209EF3E728C8B9680011A5F3 /* ScreenPositions.swift */,
-				209EF3E528C8B9680011A5F3 /* StepManager.swift */,
-				209EF3E228C8B9680011A5F3 /* ColourConstants.swift */,
-				209EF3E828C8B9680011A5F3 /* FlashcardView.swift */,
-				209EF3DF28C8B9680011A5F3 /* LineConnection.swift */,
-				209EF3E128C8B9680011A5F3 /* LocationManager.swift */,
-				209EF3E328C8B9680011A5F3 /* CompassData.swift */,
-				209EF3FC28C8F1710011A5F3 /* Utilities */,
-				209EF3FD28C8F1790011A5F3 /* New Group */,
-				209EF3E928C8B9680011A5F3 /* CompassHeading.swift */,
-				209EF3EB28C8B9680011A5F3 /* CompassMarkerView.swift */,
 				209EF3EC28C8B9680011A5F3 /* CompassView.swift */,
-				2E4FDF7228863EC20000CA9E /* CongratsScreen.swift */,
+				209EF3E828C8B9680011A5F3 /* FlashcardView.swift */,
+				209EF40028CA59BF0011A5F3 /* archive */,
+				209EF3FC28C8F1710011A5F3 /* Utilities */,
 				2E4FDF7428863EFD0000CA9E /* Swift Files */,
 				2E609F2928858D1200D09E14 /* Assets.xcassets */,
 				2E609F2B28858D1200D09E14 /* Preview Content */,
