@@ -22,6 +22,24 @@ struct DoctorView: View {
 //                .background(.gray)
 //                .cornerRadius(15)
 //            }
+            HStack {
+                Image(systemName: "circle.fill")
+                    .resizable()
+                    .scaledToFit()
+                    .padding()
+                VStack {
+                    Text("Doctor Name")
+                    Text("Certifications")
+                    Text("Department")
+                    Text("Email")
+                }
+                .padding()
+            }
+            .frame(width: 400, height: 250)
+            .foregroundColor(.white)
+            .background(colour)
+            .cornerRadius(12)
+            Spacer()
             NavigationLink(destination: ServicesView()) {
                 VStack {
                     Text("Services Available")
@@ -29,11 +47,12 @@ struct DoctorView: View {
                     Text("(Practices, Counselling)")
                         .font(.body)
                 }
-                .frame(width: 350, height: 100)
+                .frame(width: 358, height: 191)
                 .foregroundColor(textColour)
                 .background(backgroundColour)
                 .cornerRadius(15)
             }
+            Spacer()
             NavigationLink(destination: DoctorsView()) {
                 VStack {
                     Text("Similar:")
@@ -41,21 +60,24 @@ struct DoctorView: View {
                     Text("(Doctors, Services)")
                         .font(.body)
                 }
-                .frame(width: 350, height: 100)
+                .frame(width: 358, height: 134)
                 .foregroundColor(textColour)
                 .background(secondaryBackgroundColour)
                 .cornerRadius(15)
             }
+            Spacer()
             Button {
                 
             } label: {
                 Text("Locate")
+                    .bold()
+                    .frame(width: 358, height: 72)
                     .font(.title)
-                    .foregroundColor(textColour)
-                    .padding()
+                    .foregroundColor(.white)
                     .background(tertiaryBackgroundColour)
                     .cornerRadius(15)
             }
+            Spacer()
         }
     }
 }

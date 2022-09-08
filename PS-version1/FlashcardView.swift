@@ -22,7 +22,7 @@ struct FlashcardView: View {
     
     var body: some View {
         TabView(selection: $stepnumber) {
-            ForEach(0..<steps.count) { index in
+            ForEach(0..<steps.count, id: \.self) { index in
 //                  steps[index]
 //                      .tag(index)
 //

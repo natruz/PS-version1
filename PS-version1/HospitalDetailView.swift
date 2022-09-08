@@ -23,8 +23,14 @@ struct HospitalDetailView: View {
                 .frame(maxWidth: .infinity)
                 .background(backgroundColour)
                 .border(.white)
-            Rectangle()
-                .foregroundColor(.gray)
+            VStack {
+                Text("Location (directions)")
+                Text("Opening Hours")
+                Text("Services")
+                Text("General Information")
+            }
+            .background(.white)
+            Spacer()
         }
         .navigationBarTitle("")
     }
