@@ -19,6 +19,9 @@ struct ContentView: View {
         UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).attributedPlaceholder = NSAttributedString(string: "placeholder", attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
         (UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]) ).defaultTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
         UIListContentView.appearance().backgroundColor = .cyan
+        UIListContentView.appearance().tintColor = .yellow
+        UIScrollView.appearance().backgroundColor = .white
+        UITabBar.appearance().unselectedItemTintColor = .black
     }
     
     
@@ -31,9 +34,12 @@ struct ContentView: View {
                         Image(hospital.image)
                             .resizable()
                             .scaledToFit()
-                            .border(Colours.coolblue, width: 3)
                             .cornerRadius(20)
                             .frame(alignment: .center)
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 20)
+                                    .stroke(Colours.coolblue, lineWidth: 4)
+                            )
 
                         Text(hospital.name)
                             .bold()
@@ -42,14 +48,15 @@ struct ContentView: View {
                     }
                 }
                 .listRowBackground(Colours.lightblue)
-                .listRowSeparatorTint(.white)
+                .listRowSeparatorTint(.black)
                 .listItemTint(.white)
-                
             }
             .navigationTitle("Welcome to Medind!")
             .searchable(text: $searchText)
             .listItemTint(.white)
+            .textInputAutocapitalization(.never)
         }
+        .accentColor(colour)
     }
 }
 

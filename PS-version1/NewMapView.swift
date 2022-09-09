@@ -36,18 +36,18 @@ struct NewMapView: View {
         VStack(alignment: .center) {
             ZStack {
                 HStack {
-                    Button {
-                        showNavHome = true
-                    } label: {
-                        Image(systemName: "chevron.left")
-                            .foregroundColor(.white)
-                            .padding(.leading, 100)
-                            .position(x: 0, y: 60)
-                            .font(.system(size: 30))
-                    }
+//                    Button {
+//                        showNavHome = true
+//                    } label: {
+//                        Image(systemName: "chevron.left")
+//                            .foregroundColor(.white)
+//                            .padding(.leading, 100)
+//                            .position(x: 0, y: 60)
+//                            .font(.system(size: 30))
+//                    }
                     Toggle("toggle opacity", isOn: $opacity)
                         .padding(.trailing, 30)
-                        .position(x: -20, y: 40)
+                        .position(x: 20, y: 40)
                         .frame(width: 200, height: 70)
                         .foregroundColor(.white)
                         .tint(.cyan)

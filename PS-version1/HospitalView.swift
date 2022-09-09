@@ -8,31 +8,51 @@
 import SwiftUI
 
 struct HospitalView: View {
-    
-    @State var hospital: Hospital
 
+    @State var hospital: Hospital
+    
     var body: some View {
         TabView {
-            HospitalDetailView(hospital: hospital)
+            ZStack(alignment:.top) {
+                Image("background2")
+//                    .resizable()
+                    .scaledToFit()
+                    .opacity(0.2)
+                    .background(.white)
+                    .ignoresSafeArea(.all)
+                HospitalDetailView(hospital: hospital)
+                    .padding(.top, 70)
+            }
             .tabItem {
                 Label("Hospital", systemImage: "house.fill")
             }
+            
             DoctorView()
                 .tabItem {
                     Label("Doctors", systemImage: "person.fill")
                 }
-            NavigationHomeView()
+            ZStack(alignment:.center) {
+                Image("background2")
+                //                    .resizable()
+                    .scaledToFit()
+                    .opacity(0.2)
+                    .background(.white)
+                    .ignoresSafeArea(.all)
+                NavigationHomeView()
+                   
+//                    .padding(.top, 200)
+                
+            }
             .tabItem {
                 Label("Navigation", systemImage: "mappin")
             }
-            .navigationTitle("")
-            .navigationBarHidden(true)
         }
+        .accentColor(.blue)
     }
 }
 
-struct HospitalView_Previews: PreviewProvider {
-    static var previews: some View {
-        HospitalView(hospital: Hospital(name: "", image: ""))
-    }
-}
+//struct HospitalView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        HospitalView(hospital: Hospital(name: "", image: ""))
+//    }
+//}

@@ -19,13 +19,16 @@ struct NavigationHomeView: View {
                 Text("Get me somewhere")
                     .padding()
                     .foregroundColor(.white)
-                    .background(.gray)
+                    .background(colour)
                     .cornerRadius(15)
             }
             .sheet(isPresented: $isSheetShown) {
                 NavigationFormView()
             }
         }
+        .edgesIgnoringSafeArea(.all)
+//        .background(LinearGradient(colors: [.blue, .cyan], startPoint: .topLeading, endPoint: .bottomTrailing))
+        
         //        .onAppear {
         // isSheetShown = true
         //        }
