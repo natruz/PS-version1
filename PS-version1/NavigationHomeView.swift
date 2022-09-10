@@ -24,6 +24,7 @@ struct NavigationHomeView: View {
             }
             .sheet(isPresented: $isSheetShown) {
                 NavigationFormView()
+                    .background(.red)
             }
         }
         .edgesIgnoringSafeArea(.all)

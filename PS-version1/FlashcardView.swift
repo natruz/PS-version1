@@ -10,9 +10,8 @@ import SwiftUI
 struct FlashcardView: View {
    
     @State private var stepnumber = 0
-    let steps: [Steps] = [Steps(id: 1, description: "go straight"),
-                          Steps(id: 2, description: "turn left"),
-                          Steps(id: 3, description: "go up a floor"), Steps(id: 4, description: "turn right")]
+    @StateObject var ssfsfs = stepakhds()
+    
     
     // https://developer.apple.com/forums/thread/687900
     init() {
@@ -22,19 +21,19 @@ struct FlashcardView: View {
     
     var body: some View {
         TabView(selection: $stepnumber) {
-            ForEach(0..<steps.count, id: \.self) { index in
+            ForEach(0..<ssfsfs.steps.count, id: \.self) { index in
 //                  steps[index]
 //                      .tag(index)
 //
                   HStack {
-                      Text("\(steps[stepnumber % steps.count].id)")
+                      Text("\(ssfsfs.steps[stepnumber % ssfsfs.steps.count].id)")
                           .padding(10)
                           .background(.blue)
                           .foregroundColor(.white)
                           .font(.system(size: 30))
                           .cornerRadius(10)
                           
-                      Text(steps[stepnumber % steps.count].description)
+                      Text(ssfsfs.steps[stepnumber % ssfsfs.steps.count].description)
                           .foregroundColor(.black)
                           .font(.system(size: 25))
                           .minimumScaleFactor(0.02)
@@ -44,8 +43,7 @@ struct FlashcardView: View {
                   }
                   .padding()
                   .padding(.trailing, 10)
-                  
-                  .frame(width: 370, height: 130, alignment: .top)
+                  .padding(.top, 10)
                   
                   .background(Image("flashcardbg").opacity(0.1))
                   .background(.white)

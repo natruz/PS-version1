@@ -15,9 +15,9 @@ struct ContentView: View {
         UISearchBar.appearance().tintColor = UIColor.init(Colours.coolblue)
         UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor.init(Colours.coolblue)]
         UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).backgroundColor = UIColor.init(Colours.coolblue)
-        UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).tintColor = .white
+        UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).tintColor = .black
         UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).attributedPlaceholder = NSAttributedString(string: "placeholder", attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
-        (UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]) ).defaultTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        (UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]) ).defaultTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.black]
         UIListContentView.appearance().backgroundColor = .cyan
         UIListContentView.appearance().tintColor = .yellow
         UIScrollView.appearance().backgroundColor = .white

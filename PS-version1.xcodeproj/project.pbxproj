@@ -22,6 +22,7 @@
 		209EF3F828C8B9680011A5F3 /* CompassHeading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 209EF3E928C8B9680011A5F3 /* CompassHeading.swift */; };
 		209EF3F928C8B9680011A5F3 /* LocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 209EF3E628C8B9680011A5F3 /* LocationView.swift */; };
 		209EF3FF28C8F19D0011A5F3 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 209EF3FE28C8F19D0011A5F3 /* Extensions.swift */; };
+		209EF40228CBA4000011A5F3 /* Landmarks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 209EF40128CBA4000011A5F3 /* Landmarks.swift */; };
 		2E18C30928AF682600C55DCD /* AppointmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E18C30828AF682500C55DCD /* AppointmentView.swift */; };
 		2E18C30B28AF685100C55DCD /* ServicesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E18C30A28AF685100C55DCD /* ServicesView.swift */; };
 		2E18C30D28AF686F00C55DCD /* OthersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E18C30C28AF686F00C55DCD /* OthersView.swift */; };
@@ -59,6 +60,7 @@
 		209EF3EB28C8B9680011A5F3 /* CompassMarkerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompassMarkerView.swift; sourceTree = "<group>"; };
 		209EF3EC28C8B9680011A5F3 /* CompassView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompassView.swift; sourceTree = "<group>"; };
 		209EF3FE28C8F19D0011A5F3 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		209EF40128CBA4000011A5F3 /* Landmarks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Landmarks.swift; sourceTree = "<group>"; };
 		2E18C30828AF682500C55DCD /* AppointmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentView.swift; sourceTree = "<group>"; };
 		2E18C30A28AF685100C55DCD /* ServicesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesView.swift; sourceTree = "<group>"; };
 		2E18C30C28AF686F00C55DCD /* OthersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OthersView.swift; sourceTree = "<group>"; };
@@ -172,6 +174,7 @@
 				209EF3DD28C8B9580011A5F3 /* NewMapView.swift */,
 				209EF3EC28C8B9680011A5F3 /* CompassView.swift */,
 				209EF3E828C8B9680011A5F3 /* FlashcardView.swift */,
+				209EF40128CBA4000011A5F3 /* Landmarks.swift */,
 				209EF40028CA59BF0011A5F3 /* archive */,
 				209EF3FC28C8F1710011A5F3 /* Utilities */,
 				2E4FDF7428863EFD0000CA9E /* Swift Files */,
@@ -287,6 +290,7 @@
 				2E4FDF7328863EC20000CA9E /* CongratsScreen.swift in Sources */,
 				209EF3F828C8B9680011A5F3 /* CompassHeading.swift in Sources */,
 				209EF3FF28C8F19D0011A5F3 /* Extensions.swift in Sources */,
+				209EF40228CBA4000011A5F3 /* Landmarks.swift in Sources */,
 				209EF3F428C8B9680011A5F3 /* ColourConstants.swift in Sources */,
 				209EF3F728C8B9680011A5F3 /* CompassMarkerView.swift in Sources */,
 				2E609F3A2885A16E00D09E14 /* NavigationHomeView.swift in Sources */,
