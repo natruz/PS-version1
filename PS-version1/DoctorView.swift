@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct DoctorView: View {
+    
+    @Environment(\.openURL) var openURL
+    
     var body: some View {
         
         // background image
@@ -19,19 +22,6 @@ struct DoctorView: View {
                 .ignoresSafeArea(.all)
             
             VStack {
-    //            NavigationLink(destination: AppointmentView()) {
-    //                VStack {
-    //                    Text("Appointments")
-    //                        .font(.title)
-    //                    Text("(Book, Reschedule, Cancel)")
-    //                        .font(.body)
-    //                }
-    //                .frame(width: 350, height: 100)
-    //                .foregroundColor(.white)
-    //                .background(.gray)
-    //                .cornerRadius(15)
-    //            }
-                
                 HStack {
                     // doctor picture
                     Image(systemName: "circle.fill")
@@ -55,27 +45,31 @@ struct DoctorView: View {
                     RoundedRectangle(cornerRadius: 20)
                         .stroke(.white, lineWidth: 4)
                 )
-
                 // buttons to service information
-                NavigationLink(destination: ServicesView()) {
-                    VStack {
-                        Text("Services Available")
-                            .font(.title)
-                        Text("(Practices, Counselling)")
-                            .font(.body)
-                    }
-                    .frame(width: 400, height: 150)
-                    .foregroundColor(textColour)
-                    .background(backgroundColour)
-                    .cornerRadius(20)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 20)
-                            .stroke(.white, lineWidth: 4)
-                    )
+                VStack {
+                    Text("Services Available")
+                        .font(.title)
+                    Text("(Practices, Counselling)")
+                        .font(.body)
                 }
-
+                .frame(width: 400, height: 150)
+                .foregroundColor(textColour)
+                .background(backgroundColour)
+                .cornerRadius(20)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 20)
+                        .stroke(.white, lineWidth: 4)
+                )
+                .onTapGesture {
+                    let url = URL(string: "https://www.ttsh.com.sg/Patients-and-Visitors/Medical-Services/Pages/default.aspx")
+                    if let url = url {
+                        openURL(url)
+                    }
+                }
                 // buttons to other information
-                NavigationLink(destination: DoctorsView()) {
+                Button {
+                    
+                } label: {
                     VStack {
                         Text("Similar:")
                             .font(.title)
@@ -91,7 +85,6 @@ struct DoctorView: View {
                             .stroke(.white, lineWidth: 4)
                     )
                 }
-
                 // button to show a route to the doctor's office / clinic
                 Button {
                     // code
@@ -108,6 +101,10 @@ struct DoctorView: View {
                                 .stroke(.white, lineWidth: 4)
                         )
                 }
+                Text("This page is a work-in-progress, only the services button works.")
+                    .padding()
+                    .background(.gray)
+                    .cornerRadius(15)
             }
         }
         .padding(.top, 150)
