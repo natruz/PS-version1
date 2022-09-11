@@ -12,7 +12,6 @@ struct FlashcardView: View {
    
     @State private var stepnumber = 0
 //    @ObservedObject var step = Steps()
-    var map: NewMapView?
     
     // https://developer.apple.com/forums/thread/687900
     init() {
@@ -84,11 +83,13 @@ struct FlashcardView: View {
 //            debugPrint("[a]: new value \(newValue)")
 //            ddds.dsds()
 //        }
+        // https://stackoverflow.com/questions/67032651/how-to-detect-swiping-and-execute-an-action-upon-it-with-an-ios14-tabviews-pa
+        // makes the other landmarks visible when step is changed
         .onChange(of: stepnumber) { newValue in
             debugPrint("[a]: new value \(newValue)")
-            map?.nextMap = true
-            map?.secondopacity = 1.0
-            map?.thirdopacity = 0.5
+            NewMapView().nextMap = true
+            NewMapView().secondopacity = 1.0
+            NewMapView().thirdopacity = 0.5
         }
         .tabViewStyle(PageTabViewStyle(indexDisplayMode: .always))
     }
