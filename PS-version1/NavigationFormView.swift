@@ -14,18 +14,19 @@ struct NavigationFormView: View {
     
     @State var startJourney = false
 
-//    init() {
-//        UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).backgroundColor = UIColor.init(Colours.coolblue)
-//        UITextField.appearance().tintColor = .white
-//        UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).attributedPlaceholder = NSAttributedString(string: "placeholder", attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
-//    }
+    // attempt at custom colours & fixing white bar at text field)
+    //    init() {
+    //        UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).backgroundColor = UIColor.init(Colours.coolblue)
+    //        UITextField.appearance().tintColor = .white
+    //        UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).attributedPlaceholder = NSAttributedString(string: "placeholder", attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
+    //    }
     
     var body: some View {
         VStack {
             Form {
                 TextField("Destination", text: $destination)
                     .textInputAutocapitalization(.never)
-//
+                
                 Button {
                     dismiss()
                     startJourney = true
@@ -42,7 +43,6 @@ struct NavigationFormView: View {
                 
             }
         }
-        .background(.red)
     }
 }
 

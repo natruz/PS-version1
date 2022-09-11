@@ -5,6 +5,7 @@
 //  Created by NATALIE CHEN HUI REGINA RUZSICSK stu on 22/8/22.
 //
 
+// doctor data
 import Foundation
 
 enum Doctor {
@@ -17,7 +18,6 @@ struct DoctorProfile: Codable, Identifiable {
     
     func aboutMe() {
         print("Hello my name is \(name), and my favourite food is \(qualifications)")
-
     }
     
     var id = UUID()
@@ -27,8 +27,6 @@ struct DoctorProfile: Codable, Identifiable {
     var department: String
     var email: String
 }
-
-
 
 /*
  (PHD in psychology) (Department of Patient Health & Well-being)

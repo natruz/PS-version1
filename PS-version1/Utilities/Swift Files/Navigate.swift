@@ -7,6 +7,7 @@
 
 import Foundation
 
+// navigation outputs that have not been implemented yet
 struct Navigate {
     var destination: String
     var numberOfSteps = 0

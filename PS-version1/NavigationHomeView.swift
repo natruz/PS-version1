@@ -24,11 +24,12 @@ struct NavigationHomeView: View {
             }
             .sheet(isPresented: $isSheetShown) {
                 NavigationFormView()
-                    .background(.red)
             }
         }
         .edgesIgnoringSafeArea(.all)
-//        .background(LinearGradient(colors: [.blue, .cyan], startPoint: .topLeading, endPoint: .bottomTrailing))
+        // attempt at recolouring
+        // .background(LinearGradient(colors: [.blue, .cyan], startPoint: .topLeading, endPoint: .bottomTrailing))
+        
         
         //        .onAppear {
         // isSheetShown = true

@@ -7,11 +7,12 @@
 import Foundation
 import SwiftUI
 
+// direction flashcards
 struct FlashcardView: View {
    
     @State private var stepnumber = 0
-    @StateObject var ssfsfs = stepakhds()
-    
+//    @ObservedObject var step = Steps()
+    var map: NewMapView?
     
     // https://developer.apple.com/forums/thread/687900
     init() {
@@ -19,21 +20,49 @@ struct FlashcardView: View {
         UIPageControl.appearance().pageIndicatorTintColor = UIColor.cyan
      }
     
-    var body: some View {
-        TabView(selection: $stepnumber) {
-            ForEach(0..<ssfsfs.steps.count, id: \.self) { index in
-//                  steps[index]
-//                      .tag(index)
+//    func dsds() {
+//        if ssfsfs.steps[stepnumber].id == 1 {
 //
+//        }
+//    }
+    
+//    struct CardContent: View {
+//        var flashcard = FlashcardView()
+//        var body: some View {
+//            HStack {
+//                Text("\(step.steplist[stepnumber % step.steplist.count].id)")
+//                    .padding(10)
+//                    .background(.blue)
+//                    .foregroundColor(.white)
+//                    .font(.system(size: 30))
+//                    .cornerRadius(10)
+//
+//                Text(step.steplist[stepnumber % step.steplist.count].description)
+//                    .foregroundColor(.black)
+//                    .font(.system(size: 25))
+//                    .minimumScaleFactor(0.02)
+//                    .lineLimit(nil)
+//    //                          .fixedSize(horizontal: false, vertical: true)
+//                    .padding(.horizontal, 10)
+//            }
+//        }
+//    }
+    @State var arr = Steps().steplist
+    var body: some View {
+        
+        TabView(selection: $stepnumber) {
+            ForEach(0..<Steps().steplist.count, id: \.self) { _ in
+//                self.arr
+
                   HStack {
-                      Text("\(ssfsfs.steps[stepnumber % ssfsfs.steps.count].id)")
+                      Text("\(Steps().steplist[stepnumber % Steps().steplist.count].id)")
                           .padding(10)
                           .background(.blue)
                           .foregroundColor(.white)
                           .font(.system(size: 30))
                           .cornerRadius(10)
-                          
-                      Text(ssfsfs.steps[stepnumber % ssfsfs.steps.count].description)
+
+                      Text(Steps().steplist[stepnumber % Steps().steplist.count].description)
                           .foregroundColor(.black)
                           .font(.system(size: 25))
                           .minimumScaleFactor(0.02)
@@ -41,15 +70,27 @@ struct FlashcardView: View {
 //                          .fixedSize(horizontal: false, vertical: true)
                           .padding(.horizontal, 10)
                   }
-                  .padding()
+//                  .padding()
                   .padding(.trailing, 10)
-                  .padding(.top, 10)
-                  
+//                  .padding(.top, 10)
+                
                   .background(Image("flashcardbg").opacity(0.1))
                   .background(.white)
-              }
+//                  .tag(Steps().steplist.index)
             }
-            .tabViewStyle(PageTabViewStyle(indexDisplayMode: .always))
+            
+        }
+//        .onChange(of: ssfsfs.steps[stepnumber].id) { newValue in
+//            debugPrint("[a]: new value \(newValue)")
+//            ddds.dsds()
+//        }
+        .onChange(of: stepnumber) { newValue in
+            debugPrint("[a]: new value \(newValue)")
+            map?.nextMap = true
+            map?.secondopacity = 1.0
+            map?.thirdopacity = 0.5
+        }
+        .tabViewStyle(PageTabViewStyle(indexDisplayMode: .always))
     }
 }
 

@@ -7,13 +7,11 @@
 
 import Foundation
 
+// hospital data
 struct Hospital: Identifiable {
-    
     var id = UUID()
-    
     var name: String
     var image: String
-    
 }
 
 var hospitals = [

@@ -11,70 +11,58 @@ struct NewMapView: View {
     @StateObject var locationmanager = LocationManager()
     @StateObject var screenpositions = Positioning()
     @ObservedObject var compassHeading = CompassHeading()
-//    @StateObject var sfsfs = Markers(
-//    @State var ds = ZoomableScrollView<NewMapView>
 
     var width = UIScreen.main.bounds.width
     var height = UIScreen.main.bounds.height
-    
-//    lazy var xpos = CGFloat(scs.helpme.0)/10
-//    lazy var ypos = CGFloat(scs.helpme.1)+(height/2)
-//    mutating func updateMarkers() -> Void {
-//        let xtrans = xpos*346
-//        let ytrans = ypos*377
-//
-//        sfsfs.markers = CGPoint(x: xtrans, y: ytrans)
-//    }
-    @State private var opacity = false
-    @State var anotheropacity = 0.5
-    @State var thirdopacity = 1.0
-    @State private var nextMap = false
-    @State private var currentAmount = 0.0
-    @State private var finalAmount = 1.0
-    @State var showNavHome = false
-    @StateObject var ssfsfs = stepakhds()
-    
-//    if ssfsfs.steps.count == 2 {
-//        nextMap = true
-//        anotheropacity = 1.0
-//        thirdopacity = 0.5
-//    }
 
+    @State var opacity = false
+    @State var secondopacity = 0.5
+    @State var thirdopacity = 1.0
+    @State var nextMap = false
+
+    @State var showNavHome = false
+    
+    @StateObject var step = Steps()
+    
     var body: some View {
+        
         VStack(alignment: .center) {
             ZStack {
                 HStack {
+                    // toggle map opacity switch
                     Toggle("toggle opacity", isOn: $opacity)
                         .padding(.trailing, 130)
                         .padding()
-//                        .padding(.top, 100)
-//                        .position(x: 20, y: 60)
-                        .frame(width: 350)
+//                        .padding(.top, 50)
+                        .position(x: 200)
+                        .frame(width: 350, height: 50)
                         .foregroundColor(colour)
                         .tint(colour)
                 }
                 .frame(maxWidth: .infinity)
-                .padding(.top, 35)
+                .padding(.top, 50)
                 .background(backgroundColour)
+                .edgesIgnoringSafeArea(.all)
             }
-            .navigationTitle("")
-            .navigationBarHidden(true)
+            .edgesIgnoringSafeArea(.all)
             
             ZStack {
                 ZoomableScrollView {
-    //                ZoomableScrollView<NewMapView>.updateMarkers()
                     ZStack {
                         Image("map")
                             .scaledToFit()
                             .opacity(0.4)
+                        // if switch is toggled, map will be replaced with a full opacity version
                         if opacity {
                             Image("map")
                                 .scaledToFit()
                                 .opacity(1)
                         }
+                        
                         Image("map2")
                             .scaledToFit()
                             .opacity(0)
+                        // if flashcard is swiped, next map is shown and first map is hidden
                         if nextMap == true {
                             Image("map2")
                                 .scaledToFit()
@@ -83,6 +71,7 @@ struct NewMapView: View {
                                 .scaledToFit()
                                 .opacity(0)
                         }
+                        
                             Line()
                                 .stroke(style: StrokeStyle(lineWidth: 2, dash: [5]))
                                 .foregroundColor(.blue)
@@ -90,63 +79,44 @@ struct NewMapView: View {
                                 
                             Image(systemName: "location.fill")
                                 .frame(width: 10, height: 10, alignment: .center)
-                                .position(x: CGFloat(screenpositions.myLocation.0)/10, y: CGFloat(screenpositions.myLocation.1)*21000)
+                        // location of arrow corresponds to phone location with minor adjustments for screen
+                                .position(x: CGFloat(screenpositions.myLocation.0)/12, y: CGFloat(screenpositions.myLocation.1)*13000)
+                    
                                 .foregroundColor(.blue)
+                        // make arrow spin according to where phone is facing
 //                                .rotationEffect(Angle(degrees: self.compassHeading.degrees), anchor: .init(x: CGFloat(screenpositions.myLocation.0)/12, y: CGFloat(screenpositions.myLocation.1)*12500))
-                        
-                                .scaleEffect(finalAmount + currentAmount)
-//                                .onTapGesture(count: 2) {
-//    //                                MagnificationGesture()
-//    //                                    .onChanged { amount in
-//    //                                        currentAmount = amount - 1
-//    //                                    }
-//    //                                    .onEnded { amount in
-//    //                                        finalAmount += currentAmount
-//    //                                        currentAmount = 0
-//    //                                    }
-//                                    print(CGFloat(screenpositions.landmark1.0))
-//                                    print(CGFloat(screenpositions.landmark1.1))
-//
-//                                }
-                            
-                                .onTapGesture(count: 2) {
-                                    print(UIScreen.main.bounds.maxX)
-                                    print(CGFloat(screenpositions.escalator.0))
-                                    print(CGFloat(screenpositions.escalator.1))
-    
-                                }
-//                            Circle()
-//                                .frame(width: 10, height: 10, alignment: .center)
-//                                .position(x: (CGFloat(screenpositions.landmark1.0)/12)+210, y: CGFloat(screenpositions.landmark1.1)*12500)
-//                                .foregroundColor(.blue)
+
                         Escalator1()
                             .opacity(thirdopacity)
+                        
                         Escalator1top()
-                            .opacity(anotheropacity)
+                            .opacity(secondopacity)
+                        
                         Line()
                             .stroke(style: StrokeStyle(lineWidth: 2, dash: [5]))
                             .foregroundColor(.yellow)
-                            .opacity(anotheropacity)
+                            .opacity(secondopacity)
+                        
                        Corridor1()
-                            .opacity(anotheropacity)
+                            .opacity(secondopacity)
                     }
                     .rotationEffect(Angle(degrees: self.compassHeading.degrees))
                     .background(.white)
                 }
-//                .rotationEffect(Angle(degrees: self.compassHeading.degrees))
                 
+                // shows where the phone is facing; kinda glitchy but not sure how to solve that
                 CompassView()
                     .scaleEffect(0.5)
                     .background(.black)
                     .cornerRadius(40)
                     .fixedSize()
                     .position(y: -55)
-                    .padding(.leading, 370)
+                    .padding(.leading, 330)
             }
-//            ZoomWithMarkersViewController()
             
+            // flashcards for stepped directions
             FlashcardView()
-                .frame(height: 130, alignment: .bottom)
+                .frame(height: 130, alignment: .top)
                 .frame(maxWidth: .infinity)
                 .cornerRadius(20)
         }
@@ -155,6 +125,7 @@ struct NewMapView: View {
         .edgesIgnoringSafeArea([.top, .bottom])
         .background(.cyan)
         .navigate(to: NavigationHomeView(), when: $showNavHome)
+        
     }
 }
 

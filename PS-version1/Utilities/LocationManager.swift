@@ -5,6 +5,8 @@
 //  Created by FAITH CHONG RUI EN stu on 16/7/22.
 //
 
+// current location of phone
+// https://stackoverflow.com/questions/57681885/how-to-get-current-location-using-swiftui-without-viewcontrollers
 import Foundation
 import CoreLocation
 import Combine

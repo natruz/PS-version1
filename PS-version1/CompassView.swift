@@ -15,12 +15,14 @@ struct CompassView: View {
     
     var body: some View {
         VStack {
+            // north indicator line
             Capsule()
                 .frame(width: 10,
                        height: 30)
                 .foregroundColor(.white)
 
             ZStack {
+                // other direction lines
                 ForEach(Marker.markers(), id: \.self) { marker in
                     CompassMarkerView(marker: marker,
                                     compassDegress: 0)

@@ -9,10 +9,11 @@ import SwiftUI
 
 struct HospitalDetailView: View {
     
+    // pulling hospital data, right now it's placeholders
     @State var hospital: Hospital
     
     var body: some View {
-        ZStack {
+        
             VStack {
                 Image(hospital.image)
                     .resizable()
@@ -37,6 +38,7 @@ struct HospitalDetailView: View {
                         RoundedRectangle(cornerRadius: 20)
                             .stroke(.white, lineWidth: 3)
                     )
+                
                 VStack {
                     Text("Location (directions)")
                     Text("Opening Hours")
@@ -55,10 +57,8 @@ struct HospitalDetailView: View {
                     RoundedRectangle(cornerRadius: 20)
                         .stroke(.blue, lineWidth: 3)
                 )
-//                Spacer()
             }
             .navigationBarTitle("")
-        }
     }
 }
 

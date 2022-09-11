@@ -9,13 +9,15 @@ import SwiftUI
 
 struct DoctorView: View {
     var body: some View {
+        
+        // background image
         ZStack(alignment: .top) {
             Image("background2")
-//                    .resizable()
                 .scaledToFit()
                 .opacity(0.2)
                 .background(.white)
                 .ignoresSafeArea(.all)
+            
             VStack {
     //            NavigationLink(destination: AppointmentView()) {
     //                VStack {
@@ -31,17 +33,19 @@ struct DoctorView: View {
     //            }
                 
                 HStack {
+                    // doctor picture
                     Image(systemName: "circle.fill")
                         .resizable()
                         .scaledToFit()
                         .padding()
+                    
+                    // placeholders
                     VStack(alignment: .leading) {
                         Text("Doctor Name")
                         Text("Certifications")
                         Text("Department")
                         Text("Email")
                     }
-    //                .padding()
                 }
                 .frame(width: 400, height: 200)
                 .foregroundColor(.white)
@@ -52,7 +56,7 @@ struct DoctorView: View {
                         .stroke(.white, lineWidth: 4)
                 )
 
-
+                // buttons to service information
                 NavigationLink(destination: ServicesView()) {
                     VStack {
                         Text("Services Available")
@@ -70,6 +74,7 @@ struct DoctorView: View {
                     )
                 }
 
+                // buttons to other information
                 NavigationLink(destination: DoctorsView()) {
                     VStack {
                         Text("Similar:")
@@ -87,8 +92,9 @@ struct DoctorView: View {
                     )
                 }
 
+                // button to show a route to the doctor's office / clinic
                 Button {
-                    
+                    // code
                 } label: {
                     Text("Locate")
                         .bold()

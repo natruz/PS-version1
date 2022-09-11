@@ -14,7 +14,6 @@ let doctors = [
 let doctor1 = DoctorProfile(name: "Ms Faith", qualifications: "Cool", department: "ADMT", email: "faith@gmail.com")
 
 struct DoctorsView: View {
-    
     var body: some View {
             List {
                 ForEach(1...doctors.count, id: \.self) { _ in
@@ -41,5 +40,3 @@ struct DoctorsView_Previews: PreviewProvider {
         DoctorsView()
     }
 }
-
-// rename this to doctors view

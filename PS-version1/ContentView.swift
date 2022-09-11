@@ -9,8 +9,10 @@ import SwiftUI
 
 struct ContentView: View {
     
+    // what is searched in the search bar
     @State private var searchText = ""
     
+    // custom colour modifiers
     init() {
         UISearchBar.appearance().tintColor = UIColor.init(Colours.coolblue)
         UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor.init(Colours.coolblue)]
@@ -29,7 +31,6 @@ struct ContentView: View {
         NavigationView {
             List(hospitals) { hospital in
                 NavigationLink(destination: HospitalView(hospital: hospital)) {
-                   
                     VStack {
                         Image(hospital.image)
                             .resizable()
@@ -40,7 +41,6 @@ struct ContentView: View {
                                 RoundedRectangle(cornerRadius: 20)
                                     .stroke(Colours.coolblue, lineWidth: 4)
                             )
-
                         Text(hospital.name)
                             .bold()
                             .font(.title)
@@ -50,12 +50,15 @@ struct ContentView: View {
                 .listRowBackground(Colours.lightblue)
                 .listRowSeparatorTint(.black)
                 .listItemTint(.white)
+                .accentColor(colour)
             }
             .navigationTitle("Welcome to Medind!")
             .searchable(text: $searchText)
             .listItemTint(.white)
             .textInputAutocapitalization(.never)
+            .accentColor(colour)
         }
+        // changing the colour of the nav buttons
         .accentColor(colour)
     }
 }

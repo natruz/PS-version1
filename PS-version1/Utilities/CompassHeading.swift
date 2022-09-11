@@ -5,6 +5,8 @@
 //  Created by FAITH CHONG RUI EN stu on 18/7/22.
 //
 
+// get the headings of the phone
+// https://medium.com/@darrenleak1/build-a-compass-app-with-swiftui-f9b7faa78098
 import Foundation
 import Combine
 import CoreLocation

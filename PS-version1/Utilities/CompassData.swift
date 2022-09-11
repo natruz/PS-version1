@@ -5,6 +5,8 @@
 //  Created by FAITH CHONG RUI EN stu on 16/7/22.
 //
 
+// model for the compass markers
+// https://medium.com/@darrenleak1/build-a-compass-app-with-swiftui-f9b7faa78098
 struct Marker: Hashable {
     let degrees: Double
     let label: String
@@ -18,6 +20,7 @@ struct Marker: Hashable {
         return String(format: "%.0f", self.degrees)
     }
 
+    // cardinal directions
     static func markers() -> [Marker] {
         return [
             Marker(degrees: 0, label: "S"),

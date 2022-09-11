@@ -25,7 +25,7 @@
 		209EF40228CBA4000011A5F3 /* Landmarks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 209EF40128CBA4000011A5F3 /* Landmarks.swift */; };
 		2E18C30928AF682600C55DCD /* AppointmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E18C30828AF682500C55DCD /* AppointmentView.swift */; };
 		2E18C30B28AF685100C55DCD /* ServicesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E18C30A28AF685100C55DCD /* ServicesView.swift */; };
-		2E18C30D28AF686F00C55DCD /* OthersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E18C30C28AF686F00C55DCD /* OthersView.swift */; };
+		2E18C30D28AF686F00C55DCD /* DoctorsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E18C30C28AF686F00C55DCD /* DoctorsView.swift */; };
 		2E4A622728C8B53800933F21 /* Colours.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4A622628C8B53700933F21 /* Colours.swift */; };
 		2E4FDF6D288638B70000CA9E /* HospitalNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4FDF6C288638B60000CA9E /* HospitalNavigationView.swift */; };
 		2E4FDF71288639F40000CA9E /* Navigate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4FDF70288639F40000CA9E /* Navigate.swift */; };
@@ -63,7 +63,7 @@
 		209EF40128CBA4000011A5F3 /* Landmarks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Landmarks.swift; sourceTree = "<group>"; };
 		2E18C30828AF682500C55DCD /* AppointmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentView.swift; sourceTree = "<group>"; };
 		2E18C30A28AF685100C55DCD /* ServicesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesView.swift; sourceTree = "<group>"; };
-		2E18C30C28AF686F00C55DCD /* OthersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OthersView.swift; sourceTree = "<group>"; };
+		2E18C30C28AF686F00C55DCD /* DoctorsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorsView.swift; sourceTree = "<group>"; };
 		2E4A622628C8B53700933F21 /* Colours.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colours.swift; sourceTree = "<group>"; };
 		2E4FDF6C288638B60000CA9E /* HospitalNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HospitalNavigationView.swift; sourceTree = "<group>"; };
 		2E4FDF70288639F40000CA9E /* Navigate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigate.swift; sourceTree = "<group>"; };
@@ -107,11 +107,12 @@
 				209EF3E328C8B9680011A5F3 /* CompassData.swift */,
 				209EF3E928C8B9680011A5F3 /* CompassHeading.swift */,
 				209EF3EB28C8B9680011A5F3 /* CompassMarkerView.swift */,
+				2E4FDF7428863EFD0000CA9E /* Swift Files */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
 		};
-		209EF40028CA59BF0011A5F3 /* archive */ = {
+		209EF40028CA59BF0011A5F3 /* Archive */ = {
 			isa = PBXGroup;
 			children = (
 				2E4FDF7228863EC20000CA9E /* CongratsScreen.swift */,
@@ -119,7 +120,7 @@
 				209EF3E628C8B9680011A5F3 /* LocationView.swift */,
 				209EF3EA28C8B9680011A5F3 /* MarkerView.swift */,
 			);
-			path = archive;
+			path = Archive;
 			sourceTree = "<group>";
 		};
 		2E18C30E28AF687C00C55DCD /* Doctors */ = {
@@ -127,7 +128,7 @@
 			children = (
 				2E18C30828AF682500C55DCD /* AppointmentView.swift */,
 				2E18C30A28AF685100C55DCD /* ServicesView.swift */,
-				2E18C30C28AF686F00C55DCD /* OthersView.swift */,
+				2E18C30C28AF686F00C55DCD /* DoctorsView.swift */,
 			);
 			path = Doctors;
 			sourceTree = "<group>";
@@ -175,10 +176,9 @@
 				209EF3EC28C8B9680011A5F3 /* CompassView.swift */,
 				209EF3E828C8B9680011A5F3 /* FlashcardView.swift */,
 				209EF40128CBA4000011A5F3 /* Landmarks.swift */,
-				209EF40028CA59BF0011A5F3 /* archive */,
 				209EF3FC28C8F1710011A5F3 /* Utilities */,
-				2E4FDF7428863EFD0000CA9E /* Swift Files */,
 				2E609F2928858D1200D09E14 /* Assets.xcassets */,
+				209EF40028CA59BF0011A5F3 /* Archive */,
 				2E609F2B28858D1200D09E14 /* Preview Content */,
 			);
 			path = "PS-version1";
@@ -285,7 +285,7 @@
 				2E694EED28B372CD00FCAAA3 /* Appointment.swift in Sources */,
 				209EF3EF28C8B9680011A5F3 /* LineConnection.swift in Sources */,
 				209EF3F628C8B9680011A5F3 /* ScreenPositions.swift in Sources */,
-				2E18C30D28AF686F00C55DCD /* OthersView.swift in Sources */,
+				2E18C30D28AF686F00C55DCD /* DoctorsView.swift in Sources */,
 				2E4FDF6D288638B70000CA9E /* HospitalNavigationView.swift in Sources */,
 				2E4FDF7328863EC20000CA9E /* CongratsScreen.swift in Sources */,
 				209EF3F828C8B9680011A5F3 /* CompassHeading.swift in Sources */,
@@ -423,7 +423,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"PS-version1/Preview Content\"";
-				DEVELOPMENT_TEAM = HD67338BAJ;
+				DEVELOPMENT_TEAM = V54B28UN5Q;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "";
@@ -438,7 +438,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.natruz;
+				PRODUCT_BUNDLE_IDENTIFIER = "Faith.PS-version1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -454,7 +454,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"PS-version1/Preview Content\"";
-				DEVELOPMENT_TEAM = HD67338BAJ;
+				DEVELOPMENT_TEAM = V54B28UN5Q;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "";
@@ -469,7 +469,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.natruz;
+				PRODUCT_BUNDLE_IDENTIFIER = "Faith.PS-version1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

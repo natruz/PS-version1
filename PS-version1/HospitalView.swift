@@ -12,14 +12,17 @@ struct HospitalView: View {
     @State var hospital: Hospital
     
     var body: some View {
+        
         TabView {
-            ZStack(alignment:.top) {
+            // background image
+            ZStack(alignment: .top) {
+                
                 Image("background2")
-//                    .resizable()
                     .scaledToFit()
                     .opacity(0.2)
                     .background(.white)
                     .ignoresSafeArea(.all)
+                
                 HospitalDetailView(hospital: hospital)
                     .padding(.top, 70)
             }
@@ -31,28 +34,22 @@ struct HospitalView: View {
                 .tabItem {
                     Label("Doctors", systemImage: "person.fill")
                 }
-            ZStack(alignment:.center) {
+            
+            // background image
+            ZStack(alignment: .center) {
                 Image("background2")
-                //                    .resizable()
                     .scaledToFit()
                     .opacity(0.2)
                     .background(.white)
                     .ignoresSafeArea(.all)
-                NavigationHomeView()
-                   
-//                    .padding(.top, 200)
                 
+                NavigationHomeView()
             }
             .tabItem {
                 Label("Navigation", systemImage: "mappin")
             }
         }
+        // changing colour of selected tab item
         .accentColor(.blue)
     }
 }
-
-//struct HospitalView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        HospitalView(hospital: Hospital(name: "", image: ""))
-//    }
-//}
